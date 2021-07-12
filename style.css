@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #09161d;
+}
+
+.card {
+  width: 320px;
+  height: 420px;
+  border-radius: 20px;
+  background-color: #122936;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  width: 100%;
+  height: 100%;
+  transform: skewY(345deg);
+  transition: .5s;
+  background-color: #1194f6;
+ 
+}
+.card:hover:before{
+  top: -70%;
+  transform: skewY(380deg);
+}
+.card::after {
+  text-align: center;
+  content: 'TokhirAsadov';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.1);
+  font-size: 3em;
+}
+
+.card .img_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  position: relative;
+  z-index: 100000;
+}
+
+.card .img_box img {
+  max-width: 100%;
+  transition: .5s;
+}
+
+.card:hover .img_box img {
+  max-width: 50%;
+}
+
+.card .contentbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  padding: 30px;
+}
+.card .contentbox h2, .card .contentbox h3 {
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.card .contentbox .buy {
+  position: relative;
+  padding: 10px 30px;
+  margin-top: 15px;
+  color: #fff;
+  text-decoration: none;
+  background-color: #2196f3;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: .5s;
+}
